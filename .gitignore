@@ -1,0 +1,45 @@
+# Flutter / Dart Tool artifacts
+**/.dart_tool/
+**/build/
+**/flutter_export_environment.sh
+
+# Pub
+**/pubspec.lock
+**/.pub-cache/
+**/.pub/
+
+# Flutter generated
+**/.flutter-plugins
+**/.flutter-plugins-dependencies
+
+# Android
+**/android/.gradle/
+**/android/local.properties
+**/android/captures/
+**/key.properties
+**/gradlew
+**/gradlew.bat
+
+# iOS
+**/ios/.symlinks/
+**/ios/Pods/
+**/ios/Flutter/flutter_export_environment.sh
+**/ios/Runner.xcworkspace/xcuserdata
+
+# IntelliJ
+*.iml
+*.ipr
+*.iws
+.idea/
+
+# VSCode
+.vscode/
+
+# Misc
+*.log
+*.DS_Store
+Thumbs.db
+
+# Large video and image assets
+**/assets/videos/*.mp4
+**/assets/images/hbg.jpg

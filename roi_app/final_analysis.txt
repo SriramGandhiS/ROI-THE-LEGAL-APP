@@ -1,0 +1,26 @@
+﻿Analyzing 5 items...                                            
+
+   info - Use 'const' with the constructor to improve performance - lib\screens\dashpage.dart:220:15 - prefer_const_constructors
+   info - Use 'const' literals as arguments to constructors of '@immutable' classes - lib\screens\dashpage.dart:220:29 - prefer_const_literals_to_create_immutables
+   info - Use 'const' with the constructor to improve performance - lib\screens\dashpage.dart:221:17 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\screens\dashpage.dart:223:17 - prefer_const_constructors
+warning - The declaration '_BrandingContainer' isn't referenced - lib\screens\dashpage.dart:403:7 - unused_element
+warning - The value of the field '_scrollAnim' isn't used - lib\screens\homepage_screen.dart:29:26 - unused_field
+  error - Undefined name '_floatAnim' - lib\screens\homepage_screen.dart:39:5 - undefined_identifier
+   info - Use 'const' with the constructor to improve performance - lib\screens\homepage_screen.dart:320:7 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\screens\homepage_screen.dart:321:7 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\screens\homepage_screen.dart:322:7 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\screens\homepage_screen.dart:323:7 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\screens\homepage_screen.dart:359:22 - prefer_const_constructors
+   info - Use 'const' literals as arguments to constructors of '@immutable' classes - lib\screens\homepage_screen.dart:359:36 - prefer_const_literals_to_create_immutables
+   info - Use 'const' with the constructor to improve performance - lib\screens\homepage_screen.dart:380:22 - prefer_const_constructors
+   info - Use 'const' literals as arguments to constructors of '@immutable' classes - lib\screens\homepage_screen.dart:380:36 - prefer_const_literals_to_create_immutables
+warning - The declaration '_showCustomerSupport' isn't referenced - lib\screens\homepage_screen.dart:506:8 - unused_element
+  error - The method 'TapGestureRecognizer' isn't defined for the type '_HomepageScreenState' - lib\screens\homepage_screen.dart:519:27 - undefined_method
+  error - The method 'launchUrl' isn't defined for the type '_HomepageScreenState' - lib\screens\homepage_screen.dart:519:65 - undefined_method
+   info - Invalid use of a private type in a public API - lib\screens\match.dart:10:3 - library_private_types_in_public_api
+   info - Use 'const' with the constructor to improve performance - lib\screens\match.dart:82:15 - prefer_const_constructors
+   info - Use 'const' with the constructor to improve performance - lib\screens\match.dart:91:15 - prefer_const_constructors
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\screens\match.dart:217:39 - deprecated_member_use
+   info - Invalid use of a private type in a public API - lib\screens\newsscreen.dart:12:3 - library_private_types_in_public_api
+

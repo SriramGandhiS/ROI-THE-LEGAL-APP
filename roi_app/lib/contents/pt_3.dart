@@ -1,0 +1,407 @@
+import 'package:flutter/material.dart';
+import 'package:video_player/video_player.dart';
+import 'package:chewie/chewie.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:login_signup/theme/app_colors.dart';
+import 'package:login_signup/quizeasy/pt_3.dart';
+import 'dart:async';
+
+class VideoPlayerScreen3 extends StatefulWidget {
+  const VideoPlayerScreen3({super.key});
+
+  @override
+  _VideoPlayerScreen3State createState() => _VideoPlayerScreen3State();
+}
+
+class _VideoPlayerScreen3State extends State<VideoPlayerScreen3>
+    with TickerProviderStateMixin {
+  late VideoPlayerController _videoController;
+  ChewieController? _chewieController;
+  bool _isVideoReady = false;
+  bool _hasVideoError = false;
+  bool _isRedirecting = false;
+  int _redirectCountdown = 10;
+  Timer? _progressTimer;
+  late AnimationController _floatCtrl;
+  late Animation<double> _floatAnim;
+
+  final String _videoId = 'pt_3';
+  final String _videoTitle = 'Part III: Fundamental Rights';
+
+  @override
+  void initState() {
+    super.initState();
+    _floatCtrl = AnimationController(
+        vsync: this, duration: const Duration(milliseconds: 2000))
+      ..repeat(reverse: true);
+    _floatAnim = Tween<double>(begin: -8, end: 8).animate(
+        CurvedAnimation(parent: _floatCtrl, curve: Curves.easeInOut));
+    _initVideo();
+  }
+
+  Future<void> _initVideo() async {
+    _videoController = VideoPlayerController.asset('assets/videos/3.mp4');
+    try {
+      await _videoController.initialize();
+      
+      // Load saved progress
+      final userId = FirebaseAuth.instance.currentUser?.uid;
+      if (userId != null) {
+        final doc = await FirebaseFirestore.instance.collection('users').doc(userId).collection('video_progress').doc(_videoId).get();
+        if (doc.exists) {
+          final position = doc.data()?['position'] ?? 0;
+          if (position > 0 && position < _videoController.value.duration.inMilliseconds - 2000) {
+            _videoController.seekTo(Duration(milliseconds: position));
+          }
+        }
+      }
+
+      _chewieController = ChewieController(
+        videoPlayerController: _videoController,
+        autoPlay: true,
+        looping: false,
+        aspectRatio: 16 / 9,
+        allowFullScreen: true,
+        showControls: true,
+        materialProgressColors: ChewieProgressColors(
+          playedColor: AppColors.primary,
+          handleColor: AppColors.primary,
+          backgroundColor: Colors.grey.shade300,
+          bufferedColor: AppColors.primary.withOpacity(0.3),
+        ),
+      );
+
+      _videoController.addListener(() {
+        if (_videoController.value.position >= _videoController.value.duration && !_isRedirecting) {
+          _startRedirectLoop();
+        }
+      });
+
+      if (mounted) {
+        setState(() => _isVideoReady = true);
+        _progressTimer = Timer.periodic(const Duration(seconds: 10), (timer) {
+          _saveProgress();
+        });
+      }
+    } catch (e) {
+      if (mounted) setState(() => _hasVideoError = true);
+    }
+  }
+
+  void _startRedirectLoop() {
+    setState(() => _isRedirecting = true);
+    Future.doWhile(() async {
+      await Future.delayed(const Duration(seconds: 1));
+      if (!mounted || !_isRedirecting) return false;
+      setState(() {
+        _redirectCountdown--;
+      });
+      if (_redirectCountdown <= 0) {
+        _enterQuiz();
+        return false;
+      }
+      return true;
+    });
+  }
+
+  void _enterQuiz() {
+    _isRedirecting = false;
+    _videoController.pause();
+    Navigator.pushReplacement(
+      context,
+      MaterialPageRoute(builder: (_) => const QuizScreen3()),
+    );
+  }
+
+  void _saveProgress() async {
+    final userId = FirebaseAuth.instance.currentUser?.uid;
+    if (userId == null || !_isVideoReady) return;
+
+    final pos = _videoController.value.position.inMilliseconds;
+    final total = _videoController.value.duration.inMilliseconds;
+    final isDone = pos >= total - 2000;
+
+    await FirebaseFirestore.instance.collection('users').doc(userId).collection('video_progress').doc(_videoId).set({
+      'videoId': _videoId,
+      'title': _videoTitle,
+      'position': isDone ? 0 : pos,
+      'duration': total,
+      'lastUpdated': FieldValue.serverTimestamp(),
+      'route': '/part3',
+    }, SetOptions(merge: true));
+  }
+
+  void _showDescriptionDialog() {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+          title: const Text('Lesson Details', style: TextStyle(fontFamily: 'PlusJakartaSans', fontWeight: FontWeight.bold)),
+          content: const Text(
+            'In this lesson, we cover Fundamental Rights (Part III), which are the basic human rights of all citizens, protected by the Constitution.',
+            style: TextStyle(fontFamily: 'Inter'),
+          ),
+          actions: [
+            TextButton(
+              onPressed: () => Navigator.of(context).pop(),
+              child: const Text('Got it', style: TextStyle(color: AppColors.primary, fontWeight: FontWeight.bold)),
+            ),
+          ],
+        );
+      },
+    );
+  }
+
+  @override
+  void dispose() {
+    _progressTimer?.cancel();
+    _saveProgress();
+    _floatCtrl.dispose();
+    _videoController.dispose();
+    _chewieController?.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Container(
+        decoration: const BoxDecoration(gradient: AppColors.backgroundGradient),
+        child: SafeArea(
+          child: Column(
+            children: [
+              // ── Custom AppBar ──
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+                child: Row(
+                  children: [
+                    IconButton(
+                      icon: Container(
+                        padding: const EdgeInsets.all(8),
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(12),
+                          boxShadow: [BoxShadow(color: Colors.black.withOpacity(0.05), blurRadius: 10)],
+                        ),
+                        child: const Icon(Icons.arrow_back_ios_new_rounded, size: 18, color: AppColors.primary),
+                      ),
+                      onPressed: () => Navigator.pop(context),
+                    ),
+                    const SizedBox(width: 8),
+                    const Expanded(
+                      child: Text(
+                        'Fundamental Rights',
+                        style: TextStyle(
+                          fontFamily: 'PlusJakartaSans',
+                          fontWeight: FontWeight.w800,
+                          fontSize: 20,
+                          color: AppColors.textPrimary,
+                        ),
+                      ),
+                    ),
+                    IconButton(
+                      icon: const Icon(Icons.info_outline_rounded, color: AppColors.primary),
+                      onPressed: _showDescriptionDialog,
+                    ),
+                  ],
+                ),
+              ),
+
+              // ── Content ──
+              Expanded(
+                child: SingleChildScrollView(
+                  physics: const BouncingScrollPhysics(),
+                  padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+                  child: Column(children: [
+                    // Floating Video Box
+                    AnimatedBuilder(
+                      animation: _floatAnim,
+                      builder: (_, child) => Transform.translate(
+                        offset: Offset(0, _floatAnim.value),
+                        child: child,
+                      ),
+                      child: Container(
+                        width: double.infinity,
+                        height: 220,
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(28),
+                          boxShadow: [
+                            BoxShadow(color: AppColors.primary.withOpacity(0.2), blurRadius: 30, offset: const Offset(0, 15)),
+                          ],
+                        ),
+                        clipBehavior: Clip.antiAlias,
+                        child: _buildVideoPlayer(),
+                      ),
+                    ),
+                    
+                    const SizedBox(height: 32),
+
+                    // 50/50 Layout
+                    Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
+                      // Left
+                      Expanded(
+                        flex: 6,
+                        child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+                          const Text('CHAPTER OVERVIEW', style: TextStyle(fontFamily: 'Inter', fontSize: 10, fontWeight: FontWeight.w800, color: AppColors.primary, letterSpacing: 1.2)),
+                          const SizedBox(height: 8),
+                          const Text(
+                            'Articles 12 to 35 deal with Fundamental Rights, the heartbeat of the Indian Constitution.',
+                            style: TextStyle(fontFamily: 'Inter', fontSize: 14, color: AppColors.textPrimary, height: 1.5, fontWeight: FontWeight.w500),
+                          ),
+                          const SizedBox(height: 20),
+                          _buildPremiumChip(
+                              Icons.timer_rounded, 
+                              _isVideoReady 
+                                ? '${_videoController.value.duration.inMinutes} Min ${_videoController.value.duration.inSeconds % 60}s'
+                                : 'Loading...'),
+                        ]),
+                      ),
+                      const SizedBox(width: 16),
+                      // Right
+                      Expanded(
+                        flex: 4,
+                        child: Column(children: [
+                          _buildStatCard('Articles', '12 - 35', Icons.menu_book_rounded),
+                          const SizedBox(height: 12),
+                          _buildStatCard('Level', 'Advanced', Icons.auto_awesome_rounded),
+                        ]),
+                      ),
+                    ]),
+
+                    const SizedBox(height: 32),
+
+                    // Key Terms section
+                    Container(
+                      width: double.infinity,
+                      padding: const EdgeInsets.all(20),
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(24),
+                        border: Border.all(color: AppColors.primary.withOpacity(0.08)),
+                      ),
+                      child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+                        const Text('Key Terms 💡', style: TextStyle(fontFamily: 'PlusJakartaSans', fontWeight: FontWeight.w800, fontSize: 16)),
+                        const SizedBox(height: 12),
+                        const Text('Equality, Freedom, Justice, Liberty, Legal Remedies.', 
+                          style: TextStyle(fontFamily: 'Inter', fontSize: 13, color: AppColors.textSecondary, height: 1.6)),
+                      ]),
+                    ),
+
+                    const SizedBox(height: 32),
+
+                    // CTA
+                    SizedBox(
+                      width: double.infinity, height: 62,
+                      child: ElevatedButton(
+                        onPressed: _enterQuiz,
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: AppColors.primary,
+                          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+                          elevation: 10,
+                          shadowColor: AppColors.primary.withOpacity(0.4),
+                        ),
+                        child: const Text('Take Chapter Quiz 🎯', style: TextStyle(fontFamily: 'PlusJakartaSans', fontWeight: FontWeight.w800, fontSize: 16, color: Colors.white)),
+                      ),
+                    ),
+                    const SizedBox(height: 20),
+                  ]),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget _buildVideoPlayer() {
+    if (_hasVideoError) {
+      return Container(
+        color: AppColors.primaryBg,
+        child: const Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Icon(Icons.error_outline_rounded, color: AppColors.textSecondary, size: 40),
+              SizedBox(height: 8),
+              const Text('Video unavailable', style: TextStyle(color: AppColors.textSecondary, fontFamily: 'Inter', fontSize: 13)),
+            ],
+          ),
+        ),
+      );
+    }
+
+    if (!_isVideoReady || _chewieController == null) {
+      return Container(
+        color: Colors.black12,
+        child: const Center(
+          child: CircularProgressIndicator(color: AppColors.primary),
+        ),
+      );
+    }
+
+    return Stack(
+      children: [
+        Chewie(controller: _chewieController!),
+        if (_isRedirecting)
+          Container(
+            color: Colors.black.withOpacity(0.8),
+            child: Center(
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  const Text('Lesson Complete! 🎉', style: TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold, fontFamily: 'PlusJakartaSans')),
+                  const SizedBox(height: 12),
+                  Text('Starting Quiz in $_redirectCountdown seconds...', style: const TextStyle(color: Colors.white70, fontSize: 14)),
+                  const SizedBox(height: 24),
+                  ElevatedButton(
+                    onPressed: _enterQuiz,
+                    style: ElevatedButton.styleFrom(backgroundColor: AppColors.primary),
+                    child: const Text('Start Now', style: TextStyle(color: Colors.white)),
+                  ),
+                  TextButton(
+                    onPressed: () => setState(() => _isRedirecting = false),
+                    child: const Text('Cancel', style: TextStyle(color: Colors.white60)),
+                  ),
+                ],
+              ),
+            ),
+          ),
+      ],
+    );
+  }
+
+  Widget _buildPremiumChip(IconData icon, String label) {
+    return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+      decoration: BoxDecoration(color: AppColors.primary.withOpacity(0.1), borderRadius: BorderRadius.circular(14)),
+      child: Row(mainAxisSize: MainAxisSize.min, children: [
+        Icon(icon, size: 14, color: AppColors.primary),
+        const SizedBox(width: 8),
+        Text(label, style: const TextStyle(fontSize: 12, fontWeight: FontWeight.w700, color: AppColors.primary)),
+      ]),
+    );
+  }
+
+  Widget _buildStatCard(String title, String val, IconData icon) {
+    return Container(
+      width: double.infinity,
+      padding: const EdgeInsets.all(12),
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(20),
+        border: Border.all(color: Colors.black.withOpacity(0.05)),
+        boxShadow: [BoxShadow(color: Colors.black.withOpacity(0.02), blurRadius: 10)],
+      ),
+      child: Column(children: [
+        Icon(icon, size: 20, color: AppColors.primary.withOpacity(0.7)),
+        const SizedBox(height: 8),
+        Text(val, style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w900, fontFamily: 'PlusJakartaSans')),
+        Text(title, style: const TextStyle(fontSize: 10, color: AppColors.textSecondary, fontWeight: FontWeight.w600)),
+      ]),
+    );
+  }
+}
