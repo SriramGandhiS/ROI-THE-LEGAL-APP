@@ -4,7 +4,7 @@ A comprehensive legal assistance platform built with Flutter and React, designed
 
 ## ⚠️ Important Security Notice
 **Only Sriram (the owner) can access all APIs and related services.** 
-All API keys have been removed from the public source code for security. To use the AI features (Gemini, ChatGPT, Groq), you must provide your own API keys in the respective configuration files.
+All API keys have been removed from the public source code for security. To use the AI features (Gemini, ChatGPT, Groq), you must request sriram for api key and integrated chats
 
 **DO NOT try to pirate or misuse this application.** Contact the owner for authorized access or collaboration.
 
