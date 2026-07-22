@@ -160,21 +160,22 @@ This repository is published exclusively for educational review, architectural a
 
 ---
 
-## 🏆 Hackathon Winner & Core Development Team
+---
 
-> **🎉 Proud Winner of ROI Hackathon!**  
-> **ROI – Rules of India** was built, presented, and won by our awesome team. Special thanks & recognition to all team members and core developers!
+## Hackathon Winner & Core Development Team
 
-### 🌟 Project Team & Contributors
+Developed by **EAT AND LEARN TEAM**
 
-| Avatar | Contributor Name | GitHub Handle | Role & Contributions | Forked Repository |
-| :---: | :--- | :--- | :--- | :--- |
-| <img src="https://github.com/SriramGandhiS.png" width="55"> | **Sriram S** | [`@SriramGandhiS`](https://github.com/SriramGandhiS) | **Lead Architect & Project Owner** | [Primary Repo](https://github.com/SriramGandhiS/ROI-THE-LEGAL-APP) |
-| <img src="https://github.com/Solairajan1509.png" width="55"> | **Solairajan** | [`@Solairajan1509`](https://github.com/Solairajan1509) | **Core Mobile Developer & Presenter** | [Solairajan Fork](https://github.com/Solairajan1509/ROI-THE-LEGAL-APP) |
-| <img src="https://github.com/Suriyakumar4036.png" width="55"> | **Suriya Kumar** | [`@Suriyakumar4036`](https://github.com/Suriyakumar4036) | **Core Full Stack Developer** | [Suriya Fork](https://github.com/Suriyakumar4036/ROI-THE-LEGAL-APP) |
-| <img src="https://github.com/sanjaysekar5.png" width="55"> | **Sanjay Sekar** | [`@sanjaysekar5`](https://github.com/sanjaysekar5) | **Core Backend & Full Stack Dev** | [Sanjay Fork](https://github.com/sanjaysekar5/ROI-THE-LEGAL-APP) |
-| <img src="https://github.com/selvinjef123.png" width="55"> | **Selvin Jef** | [`@selvinjef123`](https://github.com/selvinjef123) | **Frontend & UI Contributor** | [Selvin Fork](https://github.com/selvinjef123/ROI-THE-LEGAL-AP) |
-| <img src="https://github.com/redeyeshu007.png" width="55"> | **Red Eye Shu** | [`@redeyeshu007`](https://github.com/redeyeshu007) | **UI/UX & Feature Contributor** | [RedEye Fork](https://github.com/redeyeshu007/ROI-THE-LEGAL-APP) |
-| <img src="https://github.com/rizz-architect.png" width="55"> | **Rizz Architect** | [`@rizz-architect`](https://github.com/rizz-architect) | **Automated CI/CD & Pipeline Engineer** | [Rizz Fork](https://github.com/rizz-architect/ROI-THE-LEGAL-APP) |
+### Contributors & Team Members
+
+- **Sriram S** (@SriramGandhiS) - Full Stack Developer | API & Integration
+- **Solairajan** (@Solairajan1509) - Mobile Developer | Flutter & UI Presentation
+- **Suriya Kumar** (@Suriyakumar4036) - Full Stack Developer | Testing & Quality Assurance
+- **Sanjay Sekar** (@sanjaysekar5) - Backend Engineer | Java, Spring Boot & Git Actions
+- **Vengata Visva** - Flutter Developer | Mobile App Modules
+- **Tejini** - UI/UX Designer & Quality Assurance
+- **Selvin Jef** (@selvinjef123) - Frontend Developer | UI Components
+- **Red Eye Shu** (@redeyeshu007) - Feature Developer | Documentation & Testing
+- **Rizz Architect** (@rizz-architect) - CI/CD Pipeline & Automated Workflows
 
 ---
