@@ -174,20 +174,22 @@ This repository is published exclusively for educational review, architectural a
 
 ---
 
+---
+
 ## Hackathon Winner & Core Development Team
 
 Developed by **EAT AND LEARN TEAM**
 
-### Contributors & Team Members
-
-- **Sriram S** (@SriramGandhiS) - Full Stack Developer | API & Integration
-- **Solairajan** (@Solairajan1509) - Mobile Developer | Flutter & UI Presentation
-- **Suriya Kumar** (@Suriyakumar4036) - Full Stack Developer | Testing & Quality Assurance
-- **Sanjay Sekar** (@sanjaysekar5) - Backend Engineer | Java, Spring Boot & Git Actions
-- **Vengata Visva** - Flutter Developer | Mobile App Modules
-- **Tejini** - UI/UX Designer & Quality Assurance
-- **Selvin Jef** (@selvinjef123) - Frontend Developer | UI Components
-- **Red Eye Shu** (@redeyeshu007) - Feature Developer | Documentation & Testing
-- **Rizz Architect** (@rizz-architect) - CI/CD Pipeline & Automated Workflows
+| Avatar | Contributor Name | GitHub Handle | Role & Specialization | GitHub Profile / Fork |
+| :---: | :--- | :--- | :--- | :--- |
+| <img src="https://github.com/SriramGandhiS.png" width="50"> | **Sriram S** | `@SriramGandhiS` | Full Stack Developer & API Integration | [Profile](https://github.com/SriramGandhiS) |
+| <img src="https://github.com/Solairajan1509.png" width="50"> | **Solairajan** | `@Solairajan1509` | Mobile Developer & Flutter UI | [Fork Repo](https://github.com/Solairajan1509/ROI-THE-LEGAL-APP) |
+| <img src="https://github.com/Suriyakumar4036.png" width="50"> | **Suriya Kumar** | `@Suriyakumar4036` | Full Stack Developer & Testing | [Fork Repo](https://github.com/Suriyakumar4036/ROI-THE-LEGAL-APP) |
+| <img src="https://github.com/sanjaysekar5.png" width="50"> | **Sanjay Sekar** | `@sanjaysekar5` | Backend Engineer (Java, Spring Boot & Git Actions) | [Fork Repo](https://github.com/sanjaysekar5/ROI-THE-LEGAL-APP) |
+| <img src="https://ui-avatars.com/api/?name=Vengata+Visva&background=0D8ABC&color=fff" width="50"> | **Vengata Visva** | `Vengata Visva` | Flutter Developer & Mobile Modules | Team Member |
+| <img src="https://ui-avatars.com/api/?name=Tejini&background=6f42c1&color=fff" width="50"> | **Tejini** | `Tejini` | UI/UX Designer & Quality Assurance | Team Member |
+| <img src="https://github.com/selvinjef123.png" width="50"> | **Selvin Jef** | `@selvinjef123` | Frontend Developer & UI Components | [Fork Repo](https://github.com/selvinjef123/ROI-THE-LEGAL-AP) |
+| <img src="https://github.com/redeyeshu007.png" width="50"> | **Red Eye Shu** | `@redeyeshu007` | Feature Developer & Testing | [Fork Repo](https://github.com/redeyeshu007/ROI-THE-LEGAL-APP) |
+| <img src="https://github.com/rizz-architect.png" width="50"> | **Rizz Architect** | `@rizz-architect` | CI/CD Pipeline & Automated Workflows | [Fork Repo](https://github.com/rizz-architect/ROI-THE-LEGAL-APP) |
 
 ---
