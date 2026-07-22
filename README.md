@@ -157,7 +157,7 @@ ROI-THE-LEGAL-APP/
 
 **Proprietary Portfolio Project** — All rights reserved by **Sriram S**.
 
-This repository is published exclusively for educational review, architectural assessment, and portfolio evaluation. Unauthorized replication, redistribution, commercialization, or modifications of this source code are strictly prohibited without written consent from the author.
+This repository is published exclusively for educational review, architectural assessment, and portfolio evaluation. Unauthorized replication, redistribution, commercialization, or modifications of this source code are strictly prohibited without consent from EAT AND LEARN TEAM.
 
 *Developed by [Sriram S](https://github.com/SriramGandhiS).*
 
@@ -176,20 +176,38 @@ This repository is published exclusively for educational review, architectural a
 
 ---
 
+---
+
 ## Hackathon Winner & Core Development Team
 
 Developed by **EAT AND LEARN TEAM**
 
 | Avatar | Contributor Name | GitHub Handle | Role & Specialization | GitHub Profile / Fork |
 | :---: | :--- | :--- | :--- | :--- |
-| <img src="https://github.com/SriramGandhiS.png" width="50"> | **Sriram S** | `@SriramGandhiS` | Full Stack Developer & API Integration | [Profile](https://github.com/SriramGandhiS) |
-| <img src="https://github.com/Solairajan1509.png" width="50"> | **Solairajan** | `@Solairajan1509` | Mobile Developer & Flutter UI | [Fork Repo](https://github.com/Solairajan1509/ROI-THE-LEGAL-APP) |
-| <img src="https://github.com/Suriyakumar4036.png" width="50"> | **Suriya Kumar** | `@Suriyakumar4036` | Full Stack Developer & Testing | [Fork Repo](https://github.com/Suriyakumar4036/ROI-THE-LEGAL-APP) |
-| <img src="https://github.com/sanjaysekar5.png" width="50"> | **Sanjay Sekar** | `@sanjaysekar5` | Backend Engineer (Java, Spring Boot & Git Actions) | [Fork Repo](https://github.com/sanjaysekar5/ROI-THE-LEGAL-APP) |
-| <img src="https://ui-avatars.com/api/?name=Vengata+Visva&background=0D8ABC&color=fff" width="50"> | **Vengata Visva** | `Vengata Visva` | Flutter Developer & Mobile Modules | Team Member |
+| <img src="https://github.com/SriramGandhiS.png" width="50"> | **Sriram S** | `@SriramGandhiS` | API Integration, Overall Development & Team Management | [Profile](https://github.com/SriramGandhiS) |
+| <img src="https://github.com/Solairajan1509.png" width="50"> | **Solairajan** | `@Solairajan1509` | Full Stack Developer | [Fork Repo](https://github.com/Solairajan1509/ROI-THE-LEGAL-APP) |
+| <img src="https://ui-avatars.com/api/?name=Amees&background=17a2b8&color=fff" width="50"> | **Amees** | `Amees` | Core Developer & Module Architecture | Team Member |
+| <img src="https://github.com/Suriyakumar4036.png" width="50"> | **Suriya Kumar** | `@Suriyakumar4036` | R & D (Research & Development) | [Fork Repo](https://github.com/Suriyakumar4036/ROI-THE-LEGAL-APP) |
+| <img src="https://github.com/sanjaysekar5.png" width="50"> | **Sanjay Sekar** | `@sanjaysekar5` | Git Actions | [Fork Repo](https://github.com/sanjaysekar5/ROI-THE-LEGAL-APP) |
+| <img src="https://github.com/selvinjef123.png" width="50"> | **Selvin Jef** | `@selvinjef123` | Tester | [Fork Repo](https://github.com/selvinjef123/ROI-THE-LEGAL-AP) |
+| <img src="https://github.com/redeyeshu007.png" width="50"> | **Red Eye Shu** | `@redeyeshu007` | Lead Solution Architect & Feature Specialist | [Fork Repo](https://github.com/redeyeshu007/ROI-THE-LEGAL-APP) |
+| <img src="https://ui-avatars.com/api/?name=Vengata+Visva&background=0D8ABC&color=fff" width="50"> | **Vengata Visva** | `Vengata Visva` | Flutter Developer | Team Member |
 | <img src="https://ui-avatars.com/api/?name=Tejini&background=6f42c1&color=fff" width="50"> | **Tejini** | `Tejini` | UI/UX Designer & Quality Assurance | Team Member |
-| <img src="https://github.com/selvinjef123.png" width="50"> | **Selvin Jef** | `@selvinjef123` | Frontend Developer & UI Components | [Fork Repo](https://github.com/selvinjef123/ROI-THE-LEGAL-AP) |
-| <img src="https://github.com/redeyeshu007.png" width="50"> | **Red Eye Shu** | `@redeyeshu007` | Feature Developer & Testing | [Fork Repo](https://github.com/redeyeshu007/ROI-THE-LEGAL-APP) |
 | <img src="https://github.com/rizz-architect.png" width="50"> | **Rizz Architect** | `@rizz-architect` | CI/CD Pipeline & Automated Workflows | [Fork Repo](https://github.com/rizz-architect/ROI-THE-LEGAL-APP) |
 
+### Team Members & Contributors List
+
+- **Sriram S** (`@SriramGandhiS`) - API Integration, Overall Development & Team Management
+- **Solairajan** (`@Solairajan1509`) - Full Stack Developer
+- **Amees** - Core Developer & Module Architecture
+- **Suriya Kumar** (`@Suriyakumar4036`) - R & D (Research & Development)
+- **Sanjay Sekar** (`@sanjaysekar5`) - Git Actions
+- **Selvin Jef** (`@selvinjef123`) - Tester
+- **Red Eye Shu** (`@redeyeshu007`) - Lead Solution Architect & Feature Specialist
+- **Vengata Visva** - Flutter Developer
+- **Tejini** - UI/UX Designer & Quality Assurance
+- **Rizz Architect** (`@rizz-architect`) - CI/CD Pipeline & Automated Workflows
+
 ---
+
+Developed by **EAT AND LEARN TEAM**
