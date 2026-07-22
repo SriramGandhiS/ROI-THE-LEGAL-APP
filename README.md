@@ -22,6 +22,18 @@ An enterprise-grade, multi-platform legal assistance ecosystem built with **Flut
 
 ---
 
+
+
+## Interactive Feature & Workflow Showcase
+
+| Module | Core Functionality | Live Status & Flow |
+| :--- | :--- | :--- |
+| **NEEDHi AI Legal Tutor** | Interactive real-time legal assistant for IPC & BNS sections | Active → User Query → Groq/Gemini Llama Inference → Instant Advice |
+| **Gamified Scenarios** | Legal scenario challenges with points & ranking system | Active → Situation Simulation → Decision Logic → Score Calculation |
+| **Legalytics Web Console** | Administrative dashboard for tracking user cases & queries | Active → React Dashboard → Firebase Realtime Sync → Audit Logs |
+| **Multilingual Voice AI** | Voice-to-text legal query processing in local languages | Active → Speech Input → Whispers Model → Text Translation → Answer |
+
+
 ## System Architecture
 
 \\mermaid
