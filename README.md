@@ -18,7 +18,6 @@ An enterprise-grade, multi-platform legal assistance ecosystem built with **Flut
 - [Security & Access Configuration](#security--access-configuration)
 - [Installation & Setup](#installation--setup)
 - [License & Intellectual Property](#license--intellectual-property)
-- [Contributors](#contributors)
 
 ---
 
@@ -160,25 +159,6 @@ ROI-THE-LEGAL-APP/
 This repository is published exclusively for educational review, architectural assessment, and portfolio evaluation. Unauthorized replication, redistribution, commercialization, or modifications of this source code are strictly prohibited without consent from EAT AND LEARN TEAM.
 
 *Developed by [Sriram S](https://github.com/SriramGandhiS).*
-
----
-
-## Contributors
-
-- **Sanjay Kumar** ([@sanjaysekar5](https://github.com/sanjaysekar5)) - Backend Engineer | Java & Spring Boot
-
-
----
-
----
-
----
-
----
-
----
-
----
 
 ---
 
