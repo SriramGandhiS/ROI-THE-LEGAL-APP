@@ -186,7 +186,6 @@ Developed by **EAT AND LEARN TEAM**
 | :---: | :--- | :--- | :--- | :--- |
 | <img src="https://github.com/SriramGandhiS.png" width="50"> | **Sriram S** | `@SriramGandhiS` | API Integration, Overall Development & Team Management | [Profile](https://github.com/SriramGandhiS) |
 | <img src="https://github.com/Solairajan1509.png" width="50"> | **Solairajan** | `@Solairajan1509` | Full Stack Developer | [Fork Repo](https://github.com/Solairajan1509/ROI-THE-LEGAL-APP) |
-| <img src="https://ui-avatars.com/api/?name=Amees&background=17a2b8&color=fff" width="50"> | **Amees** | `Amees` | Core Developer & Module Architecture | Team Member |
 | <img src="https://github.com/Suriyakumar4036.png" width="50"> | **Suriya Kumar** | `@Suriyakumar4036` | R & D (Research & Development) | [Fork Repo](https://github.com/Suriyakumar4036/ROI-THE-LEGAL-APP) |
 | <img src="https://github.com/sanjaysekar5.png" width="50"> | **Sanjay Sekar** | `@sanjaysekar5` | Git Actions | [Fork Repo](https://github.com/sanjaysekar5/ROI-THE-LEGAL-APP) |
 | <img src="https://github.com/selvinjef123.png" width="50"> | **Selvin Jef** | `@selvinjef123` | Tester | [Fork Repo](https://github.com/selvinjef123/ROI-THE-LEGAL-AP) |
@@ -199,7 +198,6 @@ Developed by **EAT AND LEARN TEAM**
 
 - **Sriram S** (`@SriramGandhiS`) - API Integration, Overall Development & Team Management
 - **Solairajan** (`@Solairajan1509`) - Full Stack Developer
-- **Amees** - Core Developer & Module Architecture
 - **Suriya Kumar** (`@Suriyakumar4036`) - R & D (Research & Development)
 - **Sanjay Sekar** (`@sanjaysekar5`) - Git Actions
 - **Selvin Jef** (`@selvinjef123`) - Tester
