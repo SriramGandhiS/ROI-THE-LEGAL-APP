@@ -154,3 +154,22 @@ This repository is published exclusively for educational review, architectural a
 ## Contributors
 
 - **Sanjay Kumar** ([@sanjaysekar5](https://github.com/sanjaysekar5)) - Backend Engineer | Java & Spring Boot
+
+
+---
+
+## 👥 Core Development Team & Contributors
+
+Special thanks to all team members and contributors who built and maintained this project:
+
+| Avatar | Contributor | Role & Profile | GitHub Fork |
+| :---: | :--- | :--- | :--- |
+| <img src="https://github.com/SriramGandhiS.png" width="50"> | **Sriram S** (`SriramGandhiS`) | Lead Architect & Project Owner | [Repo Owner](https://github.com/SriramGandhiS/ROI-THE-LEGAL-APP) |
+| <img src="https://github.com/Suriyakumar4036.png" width="50"> | **Suriya Kumar** (`Suriyakumar4036`) | Core Developer & Contributor | [Fork Repo](https://github.com/Suriyakumar4036/ROI-THE-LEGAL-APP) |
+| <img src="https://github.com/sanjaysekar5.png" width="50"> | **Sanjay Sekar** (`sanjaysekar5`) | Core Developer & Contributor | [Fork Repo](https://github.com/sanjaysekar5/ROI-THE-LEGAL-APP) |
+| <img src="https://github.com/Solairajan1509.png" width="50"> | **Solairajan** (`Solairajan1509`) | Contributor & Mobile Dev | [Fork Repo](https://github.com/Solairajan1509/ROI-THE-LEGAL-APP) |
+| <img src="https://github.com/selvinjef123.png" width="50"> | **Selvin Jef** (`selvinjef123`) | Contributor & Developer | [Fork Repo](https://github.com/selvinjef123/ROI-THE-LEGAL-AP) |
+| <img src="https://github.com/redeyeshu007.png" width="50"> | **Red Eye Shu** (`redeyeshu007`) | Contributor & Developer | [Fork Repo](https://github.com/redeyeshu007/ROI-THE-LEGAL-APP) |
+| <img src="https://github.com/rizz-architect.png" width="50"> | **Rizz Architect** (`rizz-architect`) | Bot & Automation Contributor | [Fork Repo](https://github.com/rizz-architect/ROI-THE-LEGAL-APP) |
+
+---
