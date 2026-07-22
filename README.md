@@ -14,11 +14,23 @@ An enterprise-grade, multi-platform legal assistance ecosystem built with **Flut
 - [System Architecture](#system-architecture)
 - [Key Features](#key-features)
 - [Tech Stack](#tech-stack)
-- [Project Directory Structure](#project-directory-structure)
-- [Security & Access Configuration](#security--access-configuration)
-- [Installation & Setup](#installation--setup)
-- [License & Intellectual Property](#license--intellectual-property)
-- [Contributors](#contributors)
+- [Project Directory Structure
+
+`	ext
+ROI-THE-LEGAL-APP/
+├── roi_app/                  # Flutter Mobile Application
+│   ├── lib/
+│   │   ├── consts.dart       # API & Theme configurations
+│   │   ├── screens/          # NEEDHi Chat, Quiz, and Legal Info Screens
+│   │   └── main.dart         # Entrypoint
+│   └── android/app/          # Android Native wrapper
+├── legalytics-react/         # React Web Companion Dashboard
+│   ├── src/
+│   │   ├── components/       # Custom Legal UI Elements
+│   │   └── services/         # API & Groq connection modules
+│   └── App.js                # Web UI Orchestration
+└── README.md                 # Project Documentation
+`
 
 ---
 
@@ -83,98 +95,4 @@ graph TD
 
 ---
 
-## Project Directory Structure
-
-\\	ext
-ROI-THE-LEGAL-APP/
-├── roi_app/                  # Flutter Mobile Application
-│   ├── lib/
-│   │   ├── consts.dart       # API & Theme configurations
-│   │   ├── screens/          # NEEDHi Chat, Quiz, and Legal Info Screens
-│   │   └── main.dart         # Entrypoint
-│   └── android/app/          # Android Native wrapper
-├── legalytics-react/         # React Web Companion Dashboard
-│   ├── src/
-│   │   ├── components/       # Custom Legal UI Elements
-│   │   ├── services/         # API & Groq connection modules
-│   │   └── App.js            # Web UI Orchestration
-└── README.md                 # Project Documentation
-\
----
-
-## Security & Access Configuration
-
-> [!IMPORTANT]
-> **API Key Sanitization Notice:** All production API keys (Gemini, OpenAI, Groq, and Firebase credentials) have been removed from the public repository to prevent security risks. 
-> To test the interactive AI features, you must configure your local configuration files with valid API tokens as detailed in the setup steps.
-
----
-
-## Installation & Setup
-
-### Running the Flutter Mobile App
-1. Navigate to the mobile application directory:
-   \\ash
-   cd roi_app
-   \2. Fetch project dependencies:
-   \\ash
-   flutter pub get
-   \3. Add your \google-services.json\ (downloaded from your Firebase Console) to the \ndroid/app/\ directory.
-4. Input your custom API keys into the corresponding config file:
-   * Edit \lib/consts.dart\ or \lib/screens/ChatbotScreen.dart5. Launch the application on a connected device/emulator:
-   \\ash
-   flutter run
-   \
-### Running the React Web Dashboard
-1. Navigate to the web project directory:
-   \\ash
-   cd legalytics-react
-   \2. Install npm packages:
-   \\ash
-   npm install
-   \3. Create a \.env\ file in the root of the folder and configure your API endpoint:
-   \\env
-   REACT_APP_GROQ_API_KEY=your_groq_key_here
-   \4. Start the development server:
-   \\ash
-   npm start
-   \
----
-
-## License & Intellectual Property
-
-**Proprietary Portfolio Project** — All rights reserved by **Sriram S**.
-
-This repository is published exclusively for educational review, architectural assessment, and portfolio evaluation. Unauthorized replication, redistribution, commercialization, or modifications of this source code are strictly prohibited without written consent from the author.
-
-*Developed by [Sriram S](https://github.com/SriramGandhiS).*
-
----
-
-## Contributors
-
-- **Sanjay Kumar** ([@sanjaysekar5](https://github.com/sanjaysekar5)) - Backend Engineer | Java & Spring Boot
-
-
----
-
----
-
-## 🏆 Hackathon Winner & Core Development Team
-
-> **🎉 Proud Winner of ROI Hackathon!**  
-> **ROI – Rules of India** was built, presented, and won by our awesome team. Special thanks & recognition to all team members and core developers!
-
-### 🌟 Project Team & Contributors
-
-| Avatar | Contributor Name | GitHub Handle | Role & Contributions | Forked Repository |
-| :---: | :--- | :--- | :--- | :--- |
-| <img src="https://github.com/SriramGandhiS.png" width="55"> | **Sriram S** | [`@SriramGandhiS`](https://github.com/SriramGandhiS) | **Lead Architect & Project Owner** | [Primary Repo](https://github.com/SriramGandhiS/ROI-THE-LEGAL-APP) |
-| <img src="https://github.com/Solairajan1509.png" width="55"> | **Solairajan** | [`@Solairajan1509`](https://github.com/Solairajan1509) | **Core Mobile Developer & Presenter** | [Solairajan Fork](https://github.com/Solairajan1509/ROI-THE-LEGAL-APP) |
-| <img src="https://github.com/Suriyakumar4036.png" width="55"> | **Suriya Kumar** | [`@Suriyakumar4036`](https://github.com/Suriyakumar4036) | **Core Full Stack Developer** | [Suriya Fork](https://github.com/Suriyakumar4036/ROI-THE-LEGAL-APP) |
-| <img src="https://github.com/sanjaysekar5.png" width="55"> | **Sanjay Sekar** | [`@sanjaysekar5`](https://github.com/sanjaysekar5) | **Core Backend & Full Stack Dev** | [Sanjay Fork](https://github.com/sanjaysekar5/ROI-THE-LEGAL-APP) |
-| <img src="https://github.com/selvinjef123.png" width="55"> | **Selvin Jef** | [`@selvinjef123`](https://github.com/selvinjef123) | **Frontend & UI Contributor** | [Selvin Fork](https://github.com/selvinjef123/ROI-THE-LEGAL-AP) |
-| <img src="https://github.com/redeyeshu007.png" width="55"> | **Red Eye Shu** | [`@redeyeshu007`](https://github.com/redeyeshu007) | **UI/UX & Feature Contributor** | [RedEye Fork](https://github.com/redeyeshu007/ROI-THE-LEGAL-APP) |
-| <img src="https://github.com/rizz-architect.png" width="55"> | **Rizz Architect** | [`@rizz-architect`](https://github.com/rizz-architect) | **Automated CI/CD & Pipeline Engineer** | [Rizz Fork](https://github.com/rizz-architect/ROI-THE-LEGAL-APP) |
-
----
+## 
